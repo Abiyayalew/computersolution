@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html ng-app="computer">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Computer solution </title>
+
+    <!-- Bootstrap core CSS -->
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+     <link href="css/style.css" rel="stylesheet" />
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+      <script src="Scripts/jquery-3.1.0.js"></script>
+     <!-- <script src="js/script.js"></script>-->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h3 class="text-muted">Project name</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="#/main">Main</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/services">Services</a></li>
+            <li><a href="#/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+        
+      <div ng-view=""></div>
+       
+   
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+      <script >
+          var app = angular.module("computer", ["ngRoute"]);
+          app.config(function ($routeProvider) {
+              $routeProvider
+              .when("/main", {
+                  templateUrl: "main.html",
+                  controller: "MainCtrl"
+              })
+              .when("/about", {
+                  templateUrl: "about.html",
+                  controller: "AboutCtrl"
+              })
+              .when("/services", {
+                  templateUrl: "services.html",
+                  controller: "ServicesCtrl"
+              })
+              .when("/contact", {
+                  templateUrl: "contact.html",
+                  controller: "ContactCtrl"
+              }).
+              otherwise({
+                  redirectTo: '/main'
+              });
+          });
+
+          app.controller('MainCtrl', function ($scope,$http) {
+              $http.get('services.json').success(function (data) {
+                  $scope.services = data;
+              });
+
+          });
+          app.controller('AboutCtrl', function ($scope) {
+
+          });
+          app.controller('ServicesCtrl', function ($scope, $http) {
+              $http.get('services.json').success(function (data) {
+                  $scope.services = data;
+              });
+          });
+          app.controller('ContactCtrl', function ($scope, $http) {
+
+              $http.get('location.json').success(function (data) {
+                  $scope.contacts = data;
+                  console.log(data);
+              });
+
+
+          });
+
+      </script>
+      
+  </body>
+</html>

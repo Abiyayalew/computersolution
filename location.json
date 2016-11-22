@@ -1,0 +1,27 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Alversen Location",
+    "street": "1234 blue diamond ",
+    "City": "las Vegas",
+    "state": "Nevada",
+    "phone": "7021255345"
+  },
+   {
+    "id": 1,
+    "name": "Jons Location",
+    "street": "3234 jonsblvd ",
+    "City": "las Vegas",
+    "state": "Nevada",
+    "phone": "702453854"
+  },
+
+      {
+    "id": 1,
+    "name": "Spring Vally location ",
+    "street": "4533 spring vally ",
+    "City": "las Vegas",
+    "state": "Nevada",
+    "phone": "7023423453"
+  }
+]

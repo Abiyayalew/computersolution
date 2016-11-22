@@ -1,0 +1,26 @@
+﻿
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+          <div class="row">
+              <div class="col-md-4">
+                  <img src ="http://ceesl.com/wp-content/uploads/2015/07/it-service_icon.png">
+              </div>
+              <div class="col-md-8">
+                  <h1>Computer Solution !</h1>
+                  <h3>WE CAN HELP!</h3>
+                  <p class="lead">Need help with your computer,<br /> phone or tablet?<br />Check out our computer section or<br />contact us now to schedule a servicing.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div ng-repeat="service in services">
+        <div class="col-md-4">
+          <h2>{{service.name}}!</h2>
+          <p>{{service.description}} </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        </div>
+        </div>
+      

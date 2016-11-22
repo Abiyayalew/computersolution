@@ -1,0 +1,19 @@
+﻿[{
+	"id": 1,
+	"name": "HardwareRepairs",
+	"description": "Dc jack screen, replacement,Operating System Installation ,keyboard,video card,power supply,password reset,overheating issues,hard drive and memory replacement. we also repair xbox consoles.",
+	"image": "images/hwrepair.jpg"
+
+}, {
+	"id": 1,
+	"name": "Virus Removal",
+	"description": "Defends against viruses, spyware, malware and other online threats.Safeguards your identity and online transactions.Protects better and faster than the competition.",
+	"image": "images/virusremoval.jpg"
+
+}, {
+	"id": 1,
+	"name": "System Tuneup",
+	"description": "Dc jack screen, replacement,Operating System Installation ,keyboard,video card,power supply,password reset,overheating issues,hard drive and memory replacement. we also repair xbox consoles.",
+	"image": "images/systemtuning.jpg"
+
+}]
